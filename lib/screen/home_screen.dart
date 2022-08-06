@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       controller.animateToPage(nextPage,
           duration: Duration(microseconds: 400),
-          curve: Curves.bounceIn);
+          curve: Curves.easeInOut);
     });
   }
   @override
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: controller,
         children: [1, 2, 3, 4, 5].map(
                 (e) => Image.asset('asset/img/$e.jpg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
         ).toList(),
       ),
